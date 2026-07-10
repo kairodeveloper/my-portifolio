@@ -2,7 +2,7 @@ import { Navbar, Button } from "react-bootstrap";
 import styled from "styled-components";
 
 export const CustomNavBar = styled(Navbar)`
-  background-color: #121212;
+  background-color: #121212 !important;
   
   --bs-navbar-padding-y: 0;
 
