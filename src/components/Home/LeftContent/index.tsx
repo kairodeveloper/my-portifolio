@@ -10,7 +10,7 @@ const LeftContent = () => {
     <>
       <TitleGreeting>Hi, I am</TitleGreeting>
       <TitleDev>Kairo Emannoel</TitleDev>
-      <TitleName>Dev Front-End | Next.js | React.js | Node.js</TitleName>
+      <TitleName>Dev Fullstack</TitleName>
     </>
   );
 
