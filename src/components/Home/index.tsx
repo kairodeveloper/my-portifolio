@@ -7,14 +7,12 @@ const Home = () => {
   return (
     <>
       <Container className="d-flex justify-content-center">
-        <Row className="bordered-test">
+        <Row>
           <JustifiedCol md={8} lg={6}>
             <LeftContent />
           </JustifiedCol>
 
-          <Col lg={1} className=" d-xs-none d-sm-none d-md-none d-lg-block">
-            sasd
-          </Col>
+          <Col lg={1} className=" d-xs-none d-sm-none d-md-none d-lg-block" />
           <JustifiedCol md={4} lg={5}>
             <Image
               fluid
