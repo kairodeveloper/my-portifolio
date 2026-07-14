@@ -21,6 +21,6 @@ export const CustomNavBar = styled(Navbar)`
 `;
 
 export const CustomButton = styled(Button)`
-  background-color: #e86600;
-  border-color: #e86600;
+  background-color: #d35d03;
+  border-color: #d35d03;
 `;

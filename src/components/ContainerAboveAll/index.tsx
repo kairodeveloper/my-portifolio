@@ -8,7 +8,7 @@ interface ContainerAboveAllProps {
 const ContainerAboveAll = ({ children }: ContainerAboveAllProps) => (
   <ContainerBackground>
     {children}
-    <OrangeShape />
+    {/* <OrangeShape /> */}
   </ContainerBackground>
 );
 
