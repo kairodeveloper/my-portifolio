@@ -5,6 +5,12 @@ export const CustomContainer = styled(Container)`
   min-height: calc(100vh - 3.625rem);
   margin-top: 3.625rem;
   color: wheat;
+
+  @media screen and (min-width: 768px) {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
 `;
 
 export const JustifiedCol = styled(Col)`
@@ -15,6 +21,9 @@ export const JustifiedCol = styled(Col)`
 
 export const SpanColImage = styled.span`
   height: 100%;
-  display: grid;
-  place-items: center;
+
+  @media screen and (min-width: 768px) {
+    display: grid;
+    place-items: center;
+  }
 `;

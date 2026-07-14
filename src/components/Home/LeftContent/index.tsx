@@ -51,7 +51,10 @@ const LeftContent = () => {
           xs={12}
           className="d-xs-block d-sm-none d-md-none d-lg-none text-center"
         >
-          <Titles />
+          <>
+            <br />
+            <Titles />
+          </>
         </Col>
 
         {/* only md, lg and xl */}
@@ -94,7 +97,10 @@ const LeftContent = () => {
           {ActionButtons(false)}
         </Col>
 
-        <Col md={12} className="d-none d-xs-none d-sm-none d-md-block d-lg-block">
+        <Col
+          md={12}
+          className="d-none d-xs-none d-sm-none d-md-block d-lg-block"
+        >
           <br />
           <BannerDown />
         </Col>

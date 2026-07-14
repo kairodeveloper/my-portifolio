@@ -22,7 +22,7 @@ const Home = () => {
 
   return (
     <>
-      <Container className="d-flex justify-content-center">
+      <Container>
         <Row>
           <JustifiedCol
             xs={12}
