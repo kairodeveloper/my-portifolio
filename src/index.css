@@ -13,6 +13,10 @@ body {
   min-height: 100vh;
 }
 
+.bordered-test {
+  border: 1px solid white;
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;

@@ -5,7 +5,7 @@ const BaseButton = styled(Button)<{ filled?: boolean }>`
   width: fit-content;
   height: 30px;
   line-height: 15px;
-  margin-left: 1vw;
+  margin-right: 1vw;
 
   transition:
     background-color 0.5s ease,

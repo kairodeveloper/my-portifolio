@@ -7,7 +7,7 @@ export const CustomButton = styled.button`
   color: white;
   border-width: 0;
   border-radius: 100%;
-  margin-left: 1vw !important;
+  margin-right: 1vw !important;
   display: grid;
   place-items: center;
   padding: 0 !important;

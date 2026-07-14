@@ -7,7 +7,7 @@ const BannerDown = () => {
       style={{
         minHeight: "5rem",
         borderRadius: "0.5rem",
-        backgroundColor: "#1b1b1bb0",
+        backgroundColor: "#111111a9",
         padding: "1rem",
       }}
     >
