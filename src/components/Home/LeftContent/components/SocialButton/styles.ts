@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
 export const CustomButton = styled.button`
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   background-color: #ffffff48;
   color: white;
   border-width: 0;
   border-radius: 100%;
-  margin-right: 1vw !important;
+  margin-right: 2vw !important;
   display: grid;
   place-items: center;
   padding: 0 !important;

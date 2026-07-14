@@ -1,4 +1,4 @@
-import { memo, ReactNode } from "react";
+import { memo } from "react";
 import { CustomButton as Button } from "./styles";
 
 interface SocialButtonProps {
@@ -11,8 +11,8 @@ const SocialButton = ({ svgPath }: SocialButtonProps) => {
       <Button>
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
+          width="20"
+          height="20"
           fill="currentColor"
           className="bi bi-linkedin"
           viewBox="0 0 16 16"
