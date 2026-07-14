@@ -7,7 +7,13 @@ export const CustomContainer = styled(Container)`
 
 export const JustifiedCol = styled(Col)`
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+`;
+
+export const SpanColImage = styled.span`
+  height: 100%;
+  display: grid;
+  place-items: center;
 `;
