@@ -68,9 +68,9 @@ Error generating stack: `+l.message+`
   margin-top: 1rem;
   width: 100%;
 
-  /* @media (min-width: 768px) {
-    width: fit-content;
-  } */
+  @media (max-width: 768px) {
+    height: 40px;
+  }
 
   transition:
     background-color 0.5s ease,
