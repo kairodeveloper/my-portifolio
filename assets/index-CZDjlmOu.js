@@ -40,13 +40,13 @@ Error generating stack: `+l.message+`
   color: #ff6f00;
   line-height: 1;
 `,D3=me.button`
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   background-color: #ffffff48;
   color: white;
   border-width: 0;
   border-radius: 100%;
-  margin-right: 1vw !important;
+  margin-right: 2vw !important;
   display: grid;
   place-items: center;
   padding: 0 !important;
@@ -59,7 +59,7 @@ Error generating stack: `+l.message+`
     background-color: #d35d03;
     color: #121212;
   }
-`,z3=({svgPath:a})=>D.jsx(D.Fragment,{children:D.jsx(D3,{children:D.jsx("svg",{xmlns:"http://www.w3.org/2000/svg",width:"16",height:"16",fill:"currentColor",className:"bi bi-linkedin",viewBox:"0 0 16 16",children:D.jsx("path",{d:a})})})}),Jo=x.memo(z3),py=me(lr)`
+`,z3=({svgPath:a})=>D.jsx(D.Fragment,{children:D.jsx(D3,{children:D.jsx("svg",{xmlns:"http://www.w3.org/2000/svg",width:"20",height:"20",fill:"currentColor",className:"bi bi-linkedin",viewBox:"0 0 16 16",children:D.jsx("path",{d:a})})})}),Jo=x.memo(z3),py=me(lr)`
   width: fit-content;
   height: 30px;
   line-height: 15px;
