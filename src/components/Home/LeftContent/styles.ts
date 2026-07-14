@@ -13,7 +13,9 @@ export const TitleName = styled.h4`
   margin-bottom: 0 !important;
 `;
 
-export const TitleDev = styled.h1`
+export const TitleDev = styled.p`
   color: #ff6f00;
   line-height: 1;
+  font-weight: bold;
+  font-size: 3rem;
 `;

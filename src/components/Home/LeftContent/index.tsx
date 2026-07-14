@@ -29,12 +29,16 @@ const LeftContent = () => {
 
   const ActionButtons = (center?: boolean) => (
     <>
-      <br />
       <Row
         className={`add-lateral-padding-to-row ${center && "justify-content-center"}`}
+        style={{ padding: 0 }}
       >
-        <ActionButton text="Hire me" filled />
-        <ActionButton text="Download CV" />
+        <Col xs={12} md={5}>
+          <ActionButton text="Hire me" filled />
+        </Col>
+        <Col xs={12} md={5}>
+          <ActionButton text="Download CV" />
+        </Col>
       </Row>
     </>
   );
