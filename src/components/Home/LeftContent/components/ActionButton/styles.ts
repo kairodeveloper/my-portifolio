@@ -9,7 +9,7 @@ const BaseButton = styled(Button)<{ filled?: boolean }>`
   margin-top: 1rem;
   width: 100%;
 
-  @media (max-width: 992px) {
+  @media (max-width: 768px) {
     height: 40px;
   }
 
