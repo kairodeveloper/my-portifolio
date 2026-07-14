@@ -1,7 +1,11 @@
 import { memo } from "react";
-import { Col, Image, Row } from "react-bootstrap";
+import { Col, Image, Row, Spinner } from "react-bootstrap";
 import LeftContent from "./LeftContent";
-import { CustomContainer as Container, JustifiedCol, SpanColImage } from "./styles";
+import {
+  CustomContainer as Container,
+  JustifiedCol,
+  SpanColImage,
+} from "./styles";
 
 const Home = () => {
   return (
@@ -20,7 +24,7 @@ const Home = () => {
           <Col
             md={5}
             lg={5}
-            className="d-xs-none d-sm-none d-md-block d-lg-block align-middle"
+            className="d-xs-none d-sm-none d-md-block d-lg-block"
           >
             <SpanColImage>
               <Image

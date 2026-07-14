@@ -21,3 +21,11 @@ h1 {
 .bordered-test {
   border: 1px solid white;
 }
+
+.bordered-test-orange {
+  border: 1px solid orange;
+}
+
+.add-lateral-padding-to-row {
+  padding: 0 12px;
+}

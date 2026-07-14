@@ -1,5 +1,5 @@
 import { memo, ReactNode } from "react";
-import { ContainerBackground, OrangeShape } from "./styles";
+import { ContainerBackground } from "./styles";
 
 interface ContainerAboveAllProps {
   children?: ReactNode | ReactNode[];
@@ -8,7 +8,6 @@ interface ContainerAboveAllProps {
 const ContainerAboveAll = ({ children }: ContainerAboveAllProps) => (
   <ContainerBackground>
     {children}
-    {/* <OrangeShape /> */}
   </ContainerBackground>
 );
 
