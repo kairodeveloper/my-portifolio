@@ -6,9 +6,7 @@ interface ContainerAboveAllProps {
 }
 
 const ContainerAboveAll = ({ children }: ContainerAboveAllProps) => (
-  <ContainerBackground>
-    {children}
-  </ContainerBackground>
+  <ContainerBackground>{children}</ContainerBackground>
 );
 
 export default memo(ContainerAboveAll);

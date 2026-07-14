@@ -1,5 +1,5 @@
-import { HeaderProps } from './types';
+import { HeaderProps } from "./types";
 
 export const Header = (props: HeaderProps) => {
-  return ({});
+  return {};
 };

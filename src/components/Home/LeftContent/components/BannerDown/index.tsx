@@ -18,7 +18,7 @@ const BannerDown = () => {
             color: "orange",
             borderRight: "1px solid orange",
           }}
-           className="text-center"
+          className="text-center"
         >
           7+
         </Col>
@@ -28,11 +28,16 @@ const BannerDown = () => {
             color: "orange",
             borderRight: "1px solid orange",
           }}
-           className="text-center"
+          className="text-center"
         >
           10+
         </Col>
-        <Col style={{ fontWeight: "bold", color: "orange" }} className="text-center">10+</Col>
+        <Col
+          style={{ fontWeight: "bold", color: "orange" }}
+          className="text-center"
+        >
+          10+
+        </Col>
       </Row>
       <Row>
         <Col

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import colorPallete from "../../../../../utils/colors";
 
 export const CustomButton = styled.button`
   width: 40px;
@@ -17,7 +18,7 @@ export const CustomButton = styled.button`
     color 0.5s ease;
 
   &:hover {
-    background-color: #d35d03;
-    color: #121212;
+    background-color: ${colorPallete.orange01};
+    color: ${colorPallete.black02};
   }
 `;

@@ -2,9 +2,9 @@ import { memo } from "react";
 import { Col, Image, Row } from "react-bootstrap";
 import LeftContent from "./LeftContent";
 import {
-    CustomContainer as Container,
-    JustifiedCol,
-    SpanColImage,
+  CustomContainer as Container,
+  JustifiedCol,
+  SpanColImage,
 } from "./styles";
 
 const Home = () => {

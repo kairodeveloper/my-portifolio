@@ -1,9 +1,10 @@
-import { Navbar, Button } from "react-bootstrap";
+import { Button, Navbar } from "react-bootstrap";
 import styled from "styled-components";
+import colorPallete from '../../utils/colors';
 
 export const CustomNavBar = styled(Navbar)`
-  background-color: #121212 !important;
-  
+  background-color: ${colorPallete.black02} !important;
+
   --bs-navbar-padding-y: 0;
 
   #basic-nav-dropdown::after {
@@ -21,6 +22,6 @@ export const CustomNavBar = styled(Navbar)`
 `;
 
 export const CustomButton = styled(Button)`
-  background-color: #d35d03;
-  border-color: #d35d03;
+  background-color: ${colorPallete.orange01};
+  border-color: ${colorPallete.orange01};
 `;

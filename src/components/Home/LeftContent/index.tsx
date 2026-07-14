@@ -10,7 +10,7 @@ const LeftContent = () => {
     <>
       <TitleGreeting>Hi, I am</TitleGreeting>
       <TitleDev>Kairo Emannoel</TitleDev>
-      <TitleName>Developer Fullstack</TitleName>
+      <TitleName>Dev Front-End | Next.js | React.js | Node.js</TitleName>
     </>
   );
 
@@ -67,7 +67,10 @@ const LeftContent = () => {
         </Col>
 
         {/* only md, lg and xl */}
-        <Col md={12} className="d-none d-xs-none d-sm-none d-md-block d-lg-block">
+        <Col
+          md={12}
+          className="d-none d-xs-none d-sm-none d-md-block d-lg-block"
+        >
           {SocialButtons(false)}
         </Col>
 
@@ -80,7 +83,10 @@ const LeftContent = () => {
         </Col>
 
         {/* only md, lg and xl */}
-        <Col md={12} className="d-none d-xs-none d-sm-none d-md-block d-lg-block">
+        <Col
+          md={12}
+          className="d-none d-xs-none d-sm-none d-md-block d-lg-block"
+        >
           {ActionButtons(false)}
         </Col>
 
