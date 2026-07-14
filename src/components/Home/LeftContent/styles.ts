@@ -2,9 +2,6 @@ import { Col, Row } from "react-bootstrap";
 import styled from "styled-components";
 
 export const CustomCol = styled(Col)`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   color: wheat;
 `;
 

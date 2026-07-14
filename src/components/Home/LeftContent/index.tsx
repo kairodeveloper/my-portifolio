@@ -1,7 +1,7 @@
 import { memo } from "react";
-import { CustomCol as Col, TitleDev, TitleGreeting, TitleName } from "./styles";
+import { TitleDev, TitleGreeting, TitleName } from "./styles";
 import SocialButton from "./components/SocialButton";
-import { Row } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import ActionButton from "./components/ActionButton";
 import BannerDown from "./components/BannerDown";
 
@@ -45,13 +45,16 @@ const LeftContent = () => {
         {/* only xs and sm */}
         <Col
           xs={12}
-          className="d-xs-block d-sm-block d-md-none d-lg-none text-center"
+          className="d-xs-block d-sm-none d-md-none d-lg-none text-center"
         >
           <Titles />
         </Col>
 
         {/* only md, lg and xl */}
-        <Col md={12} className="d-xs-none d-sm-none d-md-block d-lg-block">
+        <Col
+          md={12}
+          className="d-none d-xs-none d-sm-none d-md-block d-lg-block"
+        >
           <Titles />
         </Col>
 
@@ -64,7 +67,7 @@ const LeftContent = () => {
         </Col>
 
         {/* only md, lg and xl */}
-        <Col md={12} className="d-xs-none d-sm-none d-md-block d-lg-block">
+        <Col md={12} className="d-none d-xs-none d-sm-none d-md-block d-lg-block">
           {SocialButtons(false)}
         </Col>
 
@@ -77,7 +80,7 @@ const LeftContent = () => {
         </Col>
 
         {/* only md, lg and xl */}
-        <Col md={12} className="d-xs-none d-sm-none d-md-block d-lg-block">
+        <Col md={12} className="d-none d-xs-none d-sm-none d-md-block d-lg-block">
           {ActionButtons(false)}
         </Col>
 
