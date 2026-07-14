@@ -46,7 +46,7 @@ Error generating stack: `+l.message+`
   color: white;
   border-width: 0;
   border-radius: 100%;
-  margin-right: 2vw !important;
+  margin-right: 16px !important;
   display: grid;
   place-items: center;
   padding: 0 !important;
