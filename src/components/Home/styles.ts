@@ -17,5 +17,4 @@ export const SpanColImage = styled.span`
   height: 100%;
   display: grid;
   place-items: center;
-  margin-bottom: 16px;
 `;
