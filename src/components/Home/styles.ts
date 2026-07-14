@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 export const CustomContainer = styled(Container)`
   min-height: calc(100vh - 3.625rem);
+  margin-top: 3.625rem;
   color: wheat;
 `;
 

@@ -18,7 +18,7 @@ export default function Header(props: HeaderProps) {
 
   return (
     <>
-      <Navbar expand="md" className="bg-body-tertiary" data-bs-theme="dark">
+      <Navbar expand="md" className="bg-body-tertiary" data-bs-theme="dark" fixed="top">
         <Container>
           <Navbar.Brand href="#home">
             <Image

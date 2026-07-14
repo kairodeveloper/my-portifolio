@@ -3,7 +3,7 @@ import { TitleDev, TitleGreeting, TitleName } from "./styles";
 import SocialButton from "./components/SocialButton";
 import { Col, Row } from "react-bootstrap";
 import ActionButton from "./components/ActionButton";
-import BannerDown from "./components/BannerDown";
+import BannerDown from "../../BannerDown";
 
 const LeftContent = () => {
   const Titles = () => (
@@ -94,7 +94,7 @@ const LeftContent = () => {
           {ActionButtons(false)}
         </Col>
 
-        <Col xs={12} md={12}>
+        <Col md={12} className="d-none d-xs-none d-sm-none d-md-block d-lg-block">
           <br />
           <BannerDown />
         </Col>
