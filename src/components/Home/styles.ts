@@ -4,11 +4,11 @@ import styled from "styled-components";
 export const CustomContainer = styled(Container)`
   height: calc(100% - 3.625rem);
   color: wheat;
-  border: 1px solid red;
+  margin-top: 4.125rem;
 
   @media only screen and (max-width: 992px) {
     height: auto;
-    margin-top: 4.125rem;
+    margin-top: 4.5rem;
   }
 
   @media screen and (min-width: 993px) {
