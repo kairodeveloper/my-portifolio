@@ -8,7 +8,7 @@ export const CustomContainer = styled(Container)`
 
   @media only screen and (max-width: 992px) {
     height: auto;
-    margin-top: 5rem;
+    margin-top: 4.125rem;
   }
 
   @media screen and (min-width: 993px) {
