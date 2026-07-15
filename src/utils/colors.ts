@@ -4,6 +4,7 @@ const colorPallete = {
   black: "#000",
   black01: "#242424",
   black02: "#121212",
+  black03: "#313131",
   grey01: "#e0e0e0ff",
   green01: "#2c4e35",
   yellow01: "#ffa800",

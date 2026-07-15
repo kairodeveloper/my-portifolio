@@ -5,15 +5,24 @@ import { Col, Row } from "react-bootstrap";
 import ActionButton from "./components/ActionButton";
 import BannerDown from "../../BannerDown";
 import { useTranslation } from "react-i18next";
+import TextingTypingComponent from "./components/TextingTypingComponent";
 
 const LeftContent = () => {
   const { t } = useTranslation();
 
   const Titles = () => (
     <>
-      <TitleGreeting>{t('home.title.greeting')}</TitleGreeting>
-      <TitleDev>{t('home.title.name')}</TitleDev>
-      <TitleName>{t('home.title.role')}</TitleName>
+      <TitleGreeting>{t("home.title.greeting")}</TitleGreeting>
+      <TitleDev>{t("home.title.name")}</TitleDev>
+      <TitleName>
+        <TextingTypingComponent
+          words={[
+            { text: t("home.title.role"), delay: 200 },
+            { text: t("home.title.name"), delay: 5200 },
+            { text: t("home.title.greeting"), delay: 10200 },
+          ]}
+        />
+      </TitleName>
     </>
   );
 
@@ -37,10 +46,10 @@ const LeftContent = () => {
         style={{ padding: 0 }}
       >
         <Col xs={12} md={5}>
-          <ActionButton text={t('home.actionbuttons.hire')} filled />
+          <ActionButton text={t("home.actionbuttons.hire")} filled />
         </Col>
         <Col xs={12} md={5}>
-          <ActionButton text={t('home.actionbuttons.downloadcv')} />
+          <ActionButton text={t("home.actionbuttons.downloadcv")} />
         </Col>
       </Row>
     </>
