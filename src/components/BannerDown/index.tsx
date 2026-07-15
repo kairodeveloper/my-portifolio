@@ -1,7 +1,10 @@
 import { memo } from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import { useTranslation } from "react-i18next";
 
 const BannerDown = () => {
+  const { t } = useTranslation();
+
   return (
     <Container
       style={{
@@ -26,14 +29,7 @@ const BannerDown = () => {
           style={{
             fontWeight: "bold",
             color: "orange",
-            borderRight: "1px solid orange",
           }}
-          className="text-center"
-        >
-          10+
-        </Col>
-        <Col
-          style={{ fontWeight: "bold", color: "orange" }}
           className="text-center"
         >
           10+
@@ -41,18 +37,12 @@ const BannerDown = () => {
       </Row>
       <Row>
         <Col
-          style={{ borderRight: "1px solid orange" }}
           className="text-center"
-        >
-          years of experience
-        </Col>
-        <Col
           style={{ borderRight: "1px solid orange" }}
-          className="text-center"
         >
-          projects
+          {t('bannerdown.years')}
         </Col>
-        <Col className="text-center">projects</Col>
+        <Col className="text-center">{t('bannerdown.projects')}</Col>
       </Row>
     </Container>
   );

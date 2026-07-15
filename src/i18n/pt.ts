@@ -9,5 +9,12 @@ export const pt_words: Resource = {
     "header.menu.contactme": "Contato",
     "header.language.options.en": "Inglês",
     "header.language.options.pt": "Português",
+    "home.title.greeting": "Olá, eu sou o",
+    "home.title.name": "Kairo Emannoel",
+    "home.title.role": "Desenvolvedor Fullstack",
+    "home.actionbuttons.hire": "Contratar",
+    "home.actionbuttons.downloadcv": "Download CV",
+    "bannerdown.years": "anos de experiência",
+    "bannerdown.projects": "projetos trabalhados",
   },
 };
