@@ -2,12 +2,19 @@ import { Col, Container } from "react-bootstrap";
 import styled from "styled-components";
 
 export const CustomContainer = styled(Container)`
-  margin-top: 3.625rem;
+  height: calc(100% - 3.625rem);
   color: wheat;
+  border: 1px solid red;
 
-  @media only screen and (min-width: 768px) and (max-width: 992px) {
+  @media only screen and (max-width: 992px) {
     height: auto;
     margin-top: 5rem;
+  }
+
+  @media screen and (min-width: 993px) {
+    margin-top: 3.625rem;
+    display: flex;
+    justify-content: center;
   }
 `;
 
