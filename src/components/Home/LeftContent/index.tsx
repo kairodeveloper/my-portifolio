@@ -17,9 +17,9 @@ const LeftContent = () => {
       <TitleName>
         <TextingTypingComponent
           words={[
-            { text: t("home.title.role"), delay: 200 },
-            { text: t("home.title.name"), delay: 5200 },
-            { text: t("home.title.greeting"), delay: 10200 },
+            { text: t("home.title.role") },
+            { text: t("home.title.name") },
+            { text: t("home.title.greeting") },
           ]}
         />
       </TitleName>

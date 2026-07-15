@@ -8,6 +8,6 @@ const animateCursos = keyframes`
 
 export const AnimatedCursor = styled.span`
   animation-name: ${animateCursos};
-  animation-duration: 750ms;
+  animation-duration: 1s;
   animation-iteration-count: infinite;
 `;

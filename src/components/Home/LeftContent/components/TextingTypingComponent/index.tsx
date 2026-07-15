@@ -1,5 +1,4 @@
 import { memo, useEffect, useState } from "react";
-import { Row } from "react-bootstrap";
 import { AnimatedCursor } from "./styles";
 
 const DELAY_START = 200;
@@ -8,7 +7,6 @@ const SPEED_PAUSE_TIMEOUT = 2000;
 
 type WordObject = {
   text: string;
-  delay?: number;
 };
 
 export interface TextingTypingComponentProps {
@@ -17,81 +15,64 @@ export interface TextingTypingComponentProps {
 
 const TextingTypingComponent = ({ words }: TextingTypingComponentProps) => {
   const [mainText, setMainText] = useState<string>("");
+  const [position, setPosition] = useState<number>(0);
 
-  const testes: WordObject[] = [
-    {
-      text: "Kairo",
-      delay: 1000,
-    },
-    {
-      text: "Emannoel",
-      delay: 4000,
-    },
-  ];
-
-  const write = async (text: string, index = 0, reverse = false) => {
+  const write = (
+    text: string,
+    positionParent: number,
+    index = 0,
+    reverse = false,
+  ) => {
     if (reverse) {
+      let conditionIndexEqualZero = index === 0;
+
+      if (conditionIndexEqualZero) {
+
+      }
+
       if (index > 0) {
         setMainText(text.slice(0, index - 1));
-        setTimeout(() => write(text, index - 1, true), SPEED_TIMEOUT);
-      }
-    } else {
-      if (index < text.length) {
-        setMainText(text.slice(0, index + 1));
-        setTimeout(() => write(text, index + 1), SPEED_TIMEOUT);
+        setTimeout(
+          () => write(text, positionParent, index - 1, true),
+          SPEED_TIMEOUT,
+        );
       }
 
-      if (index === text.length) {
-        setTimeout(() => write(text, index - 1, true), SPEED_PAUSE_TIMEOUT);
+      // end of 'loop'
+      if (index === 0) {
+        setPosition(position === words.length - 1 ? 0 : positionParent + 1);
       }
+
+    } else {
+      let conditionIndexEqualLenght = index === text.length;
+
+      setMainText(text.slice(0, index + 1));
+      setTimeout(
+        () =>
+          write(
+            text,
+            positionParent,
+            conditionIndexEqualLenght ? index - 1 : index + 1,
+            conditionIndexEqualLenght,
+          ),
+        conditionIndexEqualLenght ? SPEED_PAUSE_TIMEOUT : SPEED_TIMEOUT,
+      );
     }
   };
 
-  // useEffect(() => {
-  //   words.forEach((word) => {
-  //     setTimeout(() => {
-  //       write(word.text);
-  //     }, word.delay ?? DELAY_START);
-  //   });
-  // }, []);
-
-  // useEffect(() => {
-  //   const delay = (ms: number) =>
-  //     new Promise((resolve) => setTimeout(resolve, ms));
-
-  //   for (let index = 0; index < words.length; index++) {
-  //     setInterval(async () => {
-  //       console.log("aasd", words[index].text);
-  //       await delay(5000);
-  //     }, words[index].delay);
-
-  //     index = (index + 1) % words.length;
-  //   }
-  // }, []);
   useEffect(() => {
-    const testee = async (word: string, delay_?: number) => {
-      console.log("start");
+    const { text } = words[position ?? 0];
 
-      const promise = new Promise((resolve) => {
-        setTimeout(() => write(word), delay_ ?? DELAY_START);
-      });
-
-      await promise;
-      console.log(`end ${word}`);
-    };
-
-    words.map(async (it) => {
-      await testee(it.text, it.delay);
-    });
-  }, []);
+    setTimeout(() => {
+      write(text, position ?? 0);
+    }, DELAY_START);
+  }, [position]);
 
   return (
     <>
-      <Row>
-        <span>
-          {mainText} <AnimatedCursor>|</AnimatedCursor>
-        </span>
-      </Row>
+      <span>
+        {mainText}<AnimatedCursor>|</AnimatedCursor>
+      </span>
     </>
   );
 };
