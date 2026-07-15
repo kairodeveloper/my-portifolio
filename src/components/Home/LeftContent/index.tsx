@@ -5,15 +5,28 @@ import { Col, Row } from "react-bootstrap";
 import ActionButton from "./components/ActionButton";
 import BannerDown from "../../BannerDown";
 import { useTranslation } from "react-i18next";
+import TextingTypingComponent from "./components/TextingTypingComponent";
 
 const LeftContent = () => {
   const { t } = useTranslation();
 
   const Titles = () => (
     <>
-      <TitleGreeting>{t('home.title.greeting')}</TitleGreeting>
-      <TitleDev>{t('home.title.name')}</TitleDev>
-      <TitleName>{t('home.title.role')}</TitleName>
+      <TitleDev>
+        <span style={{ color: 'wheat' }}>{t("home.title.name")}{' '}</span>
+        {t("home.title.lastname")}
+      </TitleDev>
+      <TitleName>{t("home.title.role")}</TitleName>
+      <TitleGreeting>
+        <TextingTypingComponent
+          words={[
+            { text: "React · Node.js · NextJS" },
+            { text: "React Native · Typescript · Serverless" },
+            { text: "Postgres · Java · Kotlin" },
+            { text: "Python · NoSQL · Git" },
+          ]}
+        />
+      </TitleGreeting>
     </>
   );
 
@@ -37,10 +50,10 @@ const LeftContent = () => {
         style={{ padding: 0 }}
       >
         <Col xs={12} md={5}>
-          <ActionButton text={t('home.actionbuttons.hire')} filled />
+          <ActionButton text={t("home.actionbuttons.hire")} filled />
         </Col>
         <Col xs={12} md={5}>
-          <ActionButton text={t('home.actionbuttons.downloadcv')} />
+          <ActionButton text={t("home.actionbuttons.downloadcv")} />
         </Col>
       </Row>
     </>
