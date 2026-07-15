@@ -12,17 +12,21 @@ const LeftContent = () => {
 
   const Titles = () => (
     <>
-      <TitleGreeting>{t("home.title.greeting")}</TitleGreeting>
-      <TitleDev>{t("home.title.name")}</TitleDev>
-      <TitleName>
+      <TitleDev>
+        <span style={{ color: 'wheat' }}>{t("home.title.name")}{' '}</span>
+        {t("home.title.lastname")}
+      </TitleDev>
+      <TitleName>{t("home.title.role")}</TitleName>
+      <TitleGreeting>
         <TextingTypingComponent
           words={[
-            { text: t("home.title.role") },
-            { text: t("home.title.name") },
-            { text: t("home.title.greeting") },
+            { text: "React · Node.js · NextJS" },
+            { text: "React Native · Typescript · Serverless" },
+            { text: "Postgres · Java · Kotlin" },
+            { text: "Python · NoSQL · Git" },
           ]}
         />
-      </TitleName>
+      </TitleGreeting>
     </>
   );
 

@@ -2,7 +2,7 @@ import { memo, useEffect, useState } from "react";
 import { AnimatedCursor } from "./styles";
 
 const DELAY_START = 200;
-const SPEED_TIMEOUT = 50;
+const SPEED_TIMEOUT = 30;
 const SPEED_PAUSE_TIMEOUT = 2000;
 
 type WordObject = {
@@ -24,40 +24,32 @@ const TextingTypingComponent = ({ words }: TextingTypingComponentProps) => {
     reverse = false,
   ) => {
     if (reverse) {
-      let conditionIndexEqualZero = index === 0;
-
-      if (conditionIndexEqualZero) {
-
-      }
-
-      if (index > 0) {
-        setMainText(text.slice(0, index - 1));
-        setTimeout(
-          () => write(text, positionParent, index - 1, true),
-          SPEED_TIMEOUT,
-        );
-      }
-
-      // end of 'loop'
       if (index === 0) {
-        setPosition(position === words.length - 1 ? 0 : positionParent + 1);
+        setPosition(
+          positionParent === words.length - 1 ? 0 : positionParent + 1,
+        );
+        return;
       }
 
-    } else {
-      let conditionIndexEqualLenght = index === text.length;
+      setMainText(text.slice(0, index - 1));
 
-      setMainText(text.slice(0, index + 1));
-      setTimeout(
-        () =>
-          write(
-            text,
-            positionParent,
-            conditionIndexEqualLenght ? index - 1 : index + 1,
-            conditionIndexEqualLenght,
-          ),
-        conditionIndexEqualLenght ? SPEED_PAUSE_TIMEOUT : SPEED_TIMEOUT,
-      );
+      setTimeout(() => {
+        write(text, positionParent, index - 1, true);
+      }, SPEED_TIMEOUT);
+
+      return;
     }
+
+    setMainText(text.slice(0, index + 1));
+
+    const finished = index === text.length;
+
+    setTimeout(
+      () => {
+        write(text, positionParent, finished ? index - 1 : index + 1, finished);
+      },
+      finished ? SPEED_PAUSE_TIMEOUT : SPEED_TIMEOUT,
+    );
   };
 
   useEffect(() => {
@@ -71,7 +63,8 @@ const TextingTypingComponent = ({ words }: TextingTypingComponentProps) => {
   return (
     <>
       <span>
-        {mainText}<AnimatedCursor>|</AnimatedCursor>
+        {mainText}
+        <AnimatedCursor>|</AnimatedCursor>
       </span>
     </>
   );
