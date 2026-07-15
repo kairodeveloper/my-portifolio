@@ -3,15 +3,11 @@ import styled from "styled-components";
 import colorPallete from "../../../../../utils/colors";
 
 const BaseButton = styled(Button)<{ filled?: boolean }>`
-  height: 30px;
+  height: 40px;
   line-height: 15px;
   margin-right: 1vw;
   margin-top: 1rem;
   width: 100%;
-
-  @media (max-width: 768px) {
-    height: 40px;
-  }
 
   transition:
     background-color 0.5s ease,
