@@ -8,17 +8,25 @@ import {
 import { CustomButton as Button, CustomNavBar as Navbar } from "./styles";
 import { HeaderProps } from "./types";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 type PossibleKeys = "home" | "about" | "services" | "career";
 
 export default function Header(props: HeaderProps) {
+  const { t } = useTranslation();
+
   const [activeKey, setActiveKey] = useState<PossibleKeys>("home");
 
   const keyIsActived = (key: PossibleKeys): boolean => key === activeKey;
 
   return (
     <>
-      <Navbar expand="md" className="bg-body-tertiary" data-bs-theme="dark" fixed="top">
+      <Navbar
+        expand="md"
+        className="bg-body-tertiary"
+        data-bs-theme="dark"
+        fixed="top"
+      >
         <Container>
           <Navbar.Brand href="#home">
             <Image
@@ -39,32 +47,32 @@ export default function Header(props: HeaderProps) {
                 active={keyIsActived("home")}
                 onClick={() => setActiveKey("home")}
               >
-                Home
+                {t("header.menu.home")}
               </Nav.Link>
               <Nav.Link
                 className="navItem"
                 active={keyIsActived("about")}
                 onClick={() => setActiveKey("about")}
               >
-                About me
+                {t("header.menu.about")}
               </Nav.Link>
               <Nav.Link
                 className="navItem"
                 active={keyIsActived("services")}
                 onClick={() => setActiveKey("services")}
               >
-                Services
+                {t("header.menu.services")}
               </Nav.Link>
               <Nav.Link
                 className="navItem"
                 active={keyIsActived("career")}
                 onClick={() => setActiveKey("career")}
               >
-                Career
+                {t("header.menu.career")}
               </Nav.Link>
             </Nav>
             <DropdownDivider />
-            <Button variant="dark">Contact me</Button>
+            <Button variant="dark">{t("header.menu.contactme")}</Button>
             <NavDropdown
               title={
                 <Image
@@ -75,9 +83,12 @@ export default function Header(props: HeaderProps) {
               }
               id="basic-nav-dropdown"
             >
-              <NavDropdown.Item href="#action/3.1">English</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Português</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Espanhol</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.1">
+                {t("header.language.options.en")}
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
+                {t("header.language.options.pt")}
+              </NavDropdown.Item>
             </NavDropdown>
           </Navbar.Collapse>
         </Container>
