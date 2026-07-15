@@ -1,3 +1,5 @@
+import i18next from "i18next";
+import { useState } from "react";
 import {
   Container,
   DropdownDivider,
@@ -5,20 +7,21 @@ import {
   Nav,
   NavDropdown,
 } from "react-bootstrap";
-import { CustomButton as Button, CustomNavBar as Navbar } from "./styles";
-import { HeaderProps } from "./types";
-import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { CustomButton as Button, CustomNavBar as Navbar } from "./styles";
 
 type PossibleKeys = "home" | "about" | "services" | "career";
 
-export default function Header(props: HeaderProps) {
+export default function Header() {
   const { t } = useTranslation();
 
   const [activeKey, setActiveKey] = useState<PossibleKeys>("home");
-
   const keyIsActived = (key: PossibleKeys): boolean => key === activeKey;
 
+  const changeLanguage = (payload: string) => {
+    i18next.changeLanguage(payload);
+  };
+  
   return (
     <>
       <Navbar
@@ -82,11 +85,12 @@ export default function Header(props: HeaderProps) {
                 />
               }
               id="basic-nav-dropdown"
+              onSelect={(e) => changeLanguage(`${e}`)}
             >
-              <NavDropdown.Item href="#action/3.1">
+              <NavDropdown.Item eventKey="en">
                 {t("header.language.options.en")}
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
+              <NavDropdown.Item eventKey="pt">
                 {t("header.language.options.pt")}
               </NavDropdown.Item>
             </NavDropdown>
